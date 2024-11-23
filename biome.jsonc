@@ -1,0 +1,31 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": ["apps/expo/.expo/**", "apps/expo/dist/**"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"useExhaustiveDependencies": {
+					"level": "warn",
+					"options": {
+						"hooks": [
+							{
+								"name": "useEffect"
+							}
+						]
+					}
+				},
+				"noUnusedImports": { "level": "error" }
+			},
+			"nursery": {
+				"useSortedClasses": { "fix": "unsafe", "level": "warn", "options": {} }
+			}
+		}
+	}
+}
