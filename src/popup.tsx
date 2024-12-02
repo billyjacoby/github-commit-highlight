@@ -1,7 +1,7 @@
+import { DEFAULT_PREFERENCES } from "@/contants";
+import type { UserPreferences } from "@/types/types";
 import { Storage } from "@plasmohq/storage";
 import { useEffect, useState } from "react";
-import type { UserPreferences } from "./types/types";
-import { DEFAULT_PREFERENCES } from "./types/types";
 
 const storage = new Storage();
 
