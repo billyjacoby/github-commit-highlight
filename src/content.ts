@@ -1,4 +1,4 @@
-import { DEFAULT_PREFERENCES } from "@/contants";
+import { DEFAULT_PREFERENCES } from "@/constants";
 import { highlightTags } from "@/lib/highlight";
 import type { UserPreferences } from "@/types/types";
 import { Storage } from "@plasmohq/storage";
