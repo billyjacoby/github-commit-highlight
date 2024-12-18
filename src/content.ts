@@ -56,7 +56,11 @@ function checkAndHighlightTags() {
 			}
 		}
 
-		highlightTags([...mostRecentTags, ...cutoffDateTags], prefs);
+		const tagsToHighlight = [
+			...(prefs.highlightMostRecent ? mostRecentTags : []),
+			...cutoffDateTags,
+		];
+		highlightTags(tagsToHighlight, prefs);
 
 		if (!relevantTimeTags.length && retryIn) {
 			setTimeout(() => checkAndHighlightRelevantTags(retryIn), retryIn);
