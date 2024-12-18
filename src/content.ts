@@ -34,9 +34,9 @@ function checkAndHighlightTags() {
 
 		let mostRecentDate = new Date(0);
 		let mostRecentTags: HTMLElement[] = [];
-		const threeDaysAgo = new Date();
-		const threeDaysAgoTags: HTMLElement[] = [];
-		threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+		const cutoffDate = new Date();
+		const cutoffDateTags: HTMLElement[] = [];
+		cutoffDate.setDate(cutoffDate.getDate() - prefs.daysToHighlight);
 
 		for (const tag of relevantTimeTags) {
 			const dateText = tag.textContent?.trim() ?? tag.innerText;
@@ -51,12 +51,12 @@ function checkAndHighlightTags() {
 				mostRecentDate = parsedDate;
 			}
 
-			if (parsedDate >= threeDaysAgo) {
-				threeDaysAgoTags.push(tag);
+			if (parsedDate >= cutoffDate) {
+				cutoffDateTags.push(tag);
 			}
 		}
 
-		highlightTags([...mostRecentTags, ...threeDaysAgoTags], prefs);
+		highlightTags([...mostRecentTags, ...cutoffDateTags], prefs);
 
 		if (!relevantTimeTags.length && retryIn) {
 			setTimeout(() => checkAndHighlightRelevantTags(retryIn), retryIn);
@@ -85,6 +85,7 @@ function checkAndHighlightTags() {
 	window.addEventListener(
 		evt,
 		() => {
+			// https://stackoverflow.com/questions/53303519/detect-an-url-change-in-a-spa
 			requestAnimationFrame(() => {
 				if (url !== location.href) {
 					highlightedTags = [];

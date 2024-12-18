@@ -12,10 +12,14 @@
 	},
 	"dependencies": {
 		"@plasmohq/storage": "^1.13.0",
+		"@radix-ui/react-slot": "^1.1.1",
 		"chrono-node": "^2.7.7",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
 		"plasmo": "0.89.4",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"tailwind-merge": "^2.5.5"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
@@ -24,11 +28,18 @@
 		"@types/node": "20.11.5",
 		"@types/react": "18.2.48",
 		"@types/react-dom": "18.2.18",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
 		"prettier": "3.2.4",
+		"tailwindcss": "^3.4.17",
 		"typescript": "5.3.3"
 	},
 	"manifest": {
-		"host_permissions": ["https://*/*"],
-		"permissions": ["tabs"]
+		"host_permissions": [
+			"https://*/*"
+		],
+		"permissions": [
+			"tabs"
+		]
 	}
 }
