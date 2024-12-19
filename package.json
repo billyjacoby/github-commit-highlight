@@ -1,7 +1,7 @@
 {
 	"name": "recent-commit-highlight",
 	"displayName": "Recent commit highlight",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An extension that highlights recently made commits",
 	"author": "billyjacoby",
 	"scripts": {
