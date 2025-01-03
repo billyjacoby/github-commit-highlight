@@ -1,7 +1,7 @@
 {
 	"$schema": "https://unpkg.com/release-it@17/schema/release-it.json",
 	"hooks": {
-		"after:bump": "pnpm run build && zip -r build/chrome-mv3-prod.zip build/chrome-mv3-prod"
+		"after:bump": "pnpm run build && zip -r build/chrome-mv3-prod.zip build/chrome-mv3-prod && pnpm run build:firefox"
 	},
 	"npm": {
 		"publish": false
@@ -12,7 +12,7 @@
 		"publishCommand": "pnpm build"
 	},
 	"github": {
-		"assets": "./build/chrome-mv3-prod.zip",
+		"assets": ["./build/chrome-mv3-prod.zip", "./build/firefox-mv2-prod.zip"],
 		"web": true,
 		"release": true,
 		"makeLatest": true

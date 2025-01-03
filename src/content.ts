@@ -104,6 +104,8 @@ function checkAndHighlightTags() {
 
 window.addEventListener("load", () => {
 	checkAndHighlightTags();
-
-	console.log("load");
 });
+
+if (window.navigator.userAgent.includes("Firefox")) {
+	checkAndHighlightTags();
+}

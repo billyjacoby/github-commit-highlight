@@ -6,6 +6,7 @@
 	"author": "billyjacoby",
 	"scripts": {
 		"dev": "plasmo dev",
+		"dev:firefox": "plasmo dev --target=firefox-mv2 --zip",
 		"build": "plasmo build",
 		"build:firefox": "plasmo build --target=firefox-mv2 --zip",
 		"package": "plasmo package",
@@ -35,5 +36,12 @@
 		"release-it": "^17.10.0",
 		"tailwindcss": "^3.4.17",
 		"typescript": "5.3.3"
+	},
+	"manifest": {
+		"browser_specific_settings": {
+			"gecko": {
+				"id": "{182c024b-8908-4924-86b2-4624d8119430}"
+			}
+		}
 	}
 }
