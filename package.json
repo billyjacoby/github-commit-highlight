@@ -1,7 +1,7 @@
 {
 	"name": "recent-commit-highlight",
 	"displayName": "Recent commit highlight",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "An extension that highlights recently made commits",
 	"author": "billyjacoby",
 	"scripts": {
@@ -13,12 +13,12 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@plasmohq/storage": "^1.13.0",
+		"@plasmohq/storage": "^1.15.0",
 		"@radix-ui/react-slot": "^1.1.1",
 		"chrono-node": "^2.7.7",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"plasmo": "0.89.4",
+		"plasmo": "0.90.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"tailwind-merge": "^2.5.5"
